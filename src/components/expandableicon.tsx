@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils"
 import { Pixelify_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const pixelfy = Pixelify_Sans({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] })
 
 
-const ExpandableIcon = ({ fullText, initialText, className }: { fullText: string, initialText: string, className: string }) => {
+const ExpandableIcon = ({ fullText, initialText, link, className }: { fullText: string, initialText: string, link: string, className: string }) => {
   const [text, setText] = useState(initialText);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -30,14 +31,19 @@ const ExpandableIcon = ({ fullText, initialText, className }: { fullText: string
 
   return (
       <div className={`flex mx-5 my-5 justify-start`}>
-        <h1
-          className={cn(`text-center min-w-12 min-h-12 text-3xl md:text-3xl ${pixelfy.className} font-light tracking-tighter leading-tight rounded p-1 shadow-xl`, className)}
+        <a href={link}>
+          <div className={cn(`flex justify-center items-center min-w-10 min-h-10 rounded p-1 shadow-xl`, className)}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-        >
-          {text}
-          {isHovered && <span className="cursor-blink font-family:">|</span>}
-        </h1>
+          >
+            <h1
+              className="text-xl"
+            >
+              {text}
+              {isHovered && <span className="cursor-blink">|</span>}
+            </h1>
+          </div>
+        </a>
       </div>
   );
 };

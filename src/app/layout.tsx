@@ -3,9 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeprovider";
 import Sidebar from "@/components/sidebar"
-import CellularAutomata from "@/components/cellularautomata";
-// import { GeistMono } from 'geist/font/mono';
-// import { Pixelify_Sans } from "next/font/google";
+import { Header } from "@/components/header"
 
 const inter = Inter({ subsets: ["latin"]})
 
