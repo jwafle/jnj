@@ -37,10 +37,10 @@ const ExpandableIcon = ({ fullText, initialText, link, className }: { fullText: 
           onMouseLeave={() => setIsHovered(false)}
           >
             <h1
-              className="text-xl"
+              className="text-xl font-light"
             >
               {text}
-              {isHovered && <span className="cursor-blink">|</span>}
+              {isHovered && <span className="cursor-blink text-2xl">|</span>}
             </h1>
           </div>
         </a>

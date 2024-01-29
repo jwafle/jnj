@@ -9,8 +9,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: ({ children }) => <h4 className="text-xl">{children}</h4>,
     img: (props) => (
       <Image
-        sizes="100vw"
-        style={{ width: '100%', height: 'auto' }}
         {...(props as ImageProps)}
       />
     ),
