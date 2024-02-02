@@ -32,7 +32,7 @@ const ExpandableIcon = ({ fullText, initialText, link, className }: { fullText: 
   return (
       <div className={`flex mx-5 my-5 justify-start`}>
         <a href={link}>
-          <div className={cn(`flex justify-center items-center min-w-10 min-h-10 rounded p-1 shadow-xl`, className)}
+          <div className={cn(`flex justify-center items-center min-w-10 min-h-10 rounded p-1`, className)}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           >

@@ -7,25 +7,25 @@ const Sidebar = () => {
         initialText="jw"
         fullText="jared.woelfel"
         link="mailto:jared.woelfel@outlook.com"
-        className="bg-orange-300 hover:bg-orange-400 hover:scale-105"
+        className="bg-orange-500"
       />
       <ExpandableIcon
         initialText="in"
         fullText="linkedin"
         link="https://www.linkedin.com/in/jared-woelfel-5361a3177/"
-        className="bg-indigo-300 hover:bg-indigo-400 hover:scale-105"
+        className="bg-indigo-400"
       />
       <ExpandableIcon
         initialText="gh"
         fullText="github"
         link="https://github.com/jwafle"
-        className="bg-purple-300 hover:bg-purple-400 hover:scale-105"
+        className="bg-purple-400"
       />
       <ExpandableIcon
         initialText="X"
         fullText="X (f.k.a twitter)"
         link="https://twitter.com/jnwafle"
-        className="bg-slate-950 text-white hover:scale-105 hover:bg-black"
+        className="bg-slate-950 text-white"
       />
     </div>
   );

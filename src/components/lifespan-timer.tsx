@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import {
   Tooltip,
   TooltipContent,
@@ -6,6 +6,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useState, useEffect } from "react";
+import { Suspense } from 'react';
 
 const LifespanTimer = () => {
   // Calculate the end date: January 4, 2077
@@ -15,6 +16,8 @@ const LifespanTimer = () => {
   const [secondsLeft, setSecondsLeft] = useState(
     (endDate - new Date().getTime()) / 1000
   );
+
+  const [isClient, setIsClient] = useState(false)
 
   // useEffect hook to set up an interval
   useEffect(() => {
@@ -32,12 +35,16 @@ const LifespanTimer = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    setIsClient(true)
+  })
+
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
         <p>tick, tick</p>
-          <p className="text-zinc-500">{Math.floor(secondsLeft)}</p>
+              <p className="text-zinc-500">{isClient ? Math.floor(secondsLeft) : "unkwn"}</p>
         </TooltipTrigger>
         <TooltipContent className="border-0 shadow-none underline underline-offset-2">approx seconds remaining in average lifespan</TooltipContent>
       </Tooltip>
