@@ -6,9 +6,7 @@ import remarkBreaks from 'remark-breaks';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  output: 'export',
   images: {
-    unoptimized: true
   },
   trailingSlash: true,
 };
