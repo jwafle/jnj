@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className={`${GeistMono.className} bg-white text-black font-extralight`}>
+      <body className={`${GeistMono.className} bg-white text-black font-extralight underline-offset-4`}>
             <Sidebar />
             {/* <CellularAutomata /> */}
             {children}

@@ -1,4 +1,6 @@
 import nextMDX from '@next/mdx';
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import remarkGfm from 'remark-gfm';
 import rehypePrism from '@mapbox/rehype-prism';
 import remarkBreaks from 'remark-breaks';
@@ -14,7 +16,7 @@ const nextConfig = {
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm, remarkBreaks],
+    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm, remarkBreaks],
     rehypePlugins: [rehypePrism],
   }
 })
