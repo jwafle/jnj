@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen p-24 justify-between gap-4">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 mb-5">
         <div className="grid grid-cols-2 gap-5">
           <div className="font-bold text-5xl">
             <span>{"hi i'm jared 👋"}</span>
@@ -23,14 +23,14 @@ export default function Home() {
           <div className="grid grid-flow-row gap-5">
             <div className="flex flex-row gap-5">
               <div className="flex flex-col gap-5 grow">
-                <h1 className="text-xl font-semibold">an engineer at heart</h1>
-                <span></span>
+                <span>my thoughts</span>
+                <span className="text-right">wisdom i have learned</span>
+                <span>interesting thoughts from others</span>
               </div>
               <Separator orientation="vertical" />
             </div>
           </div>
           <div className="col-span-2 flex flex-row">
-            <div className="-rotate-90 whitespace-nowrap">hello</div>
             <div className="grow grid grid-flow-row gap-5">
               <div className="grid grid-rows-2">
                 <div className="grid grid-cols-2 font-semibold">
@@ -89,7 +89,8 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="text-right">
-                  intern working on internal software tooling for electrical grid
+                  intern working on internal software tooling for electrical
+                  grid
                 </div>
               </div>
             </div>
@@ -97,8 +98,7 @@ export default function Home() {
         </div>
         <Separator />
         <div className="grid grid-cols-5 gap-5">
-          <div className="flex flex-col">
-            <p>wisdom i live by</p>
+          {/* <p>wisdom i live by</p>
             <ul>
               <Link href="/wisdom/the_algorithm">
                 <li className="hover:font-bold">{`1 - "the algorithm"`}</li>
@@ -107,7 +107,30 @@ export default function Home() {
               <li className="hover:font-bold">3</li>
               <li className="hover:font-bold">4</li>
               <li className="hover:font-bold">5</li>
-            </ul>
+            </ul> */}
+          <div className="flex flex-row gap-5">
+            <div className="flex flex-col gap-5">
+              <span className="font-bold">2018 - 2022</span>
+              <span className="whitespace-pre text-wrap">
+                studied electrical engineering (and played college baseball) @{" "}
+              </span>
+              <a href="https://unwsp.edu/program/engineering-abet-accredited/">
+                <div className="flex flex-row">
+                  <span className="font-bold text-purple-900 underline hover:font-extrabold hover:scale-105">
+                    University of Northwestern, St. Paul
+                  </span>
+                </div>
+              </a>
+              <span></span>
+              <span>
+                <span className="font-bold">gpa:</span> 4.0
+              </span>
+              <span>
+                <span className="font-bold">minors:</span> [Chinese Studies,
+                Bible]
+              </span>
+            </div>
+            <Separator orientation="vertical" />
           </div>
           <div className="col-span-3 aspect-video relative grow">
             <HoverCard>
@@ -115,24 +138,26 @@ export default function Home() {
                 <SkeletonImage src="/small_cover.jpeg" alt="cover image" />
               </HoverCardTrigger>
               <HoverCardContent hideWhenDetached>
-                <h3 className="font-bold">厦门市， 福建省， 中国</h3>
+                <h3 className="font-bold">中国福建省厦门市</h3>
                 <span className="text-xs font-light">
                   Sunday, July 2, 2023 4:23 p.m.
                 </span>
               </HoverCardContent>
             </HoverCard>
           </div>
-          <div className="grid grid-flow-row">
-            <div>
-            </div>
-            <div>
-              <span>hello</span>
+          <div className="flex flex-row gap-5">
+            <Separator orientation="vertical" />
+            <div className="grid grid-flow-row">
+              <div>
+                <span className="font-bold">design/research experience</span>
+              </div>
+              <div>
+                <span className="font-bold">open source contributor</span>
+              </div>
             </div>
           </div>
         </div>
-        <div className="h-96">
-          hello
-        </div>
+        <Separator />
       </div>
 
       <div className="flex flex-col items-center text-sm">
